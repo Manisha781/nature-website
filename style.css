@@ -1,0 +1,620 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700');
+
+* {
+    outline: none !important;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    position: relative;
+    z-index: 1000000;
+}
+
+p {
+    font-size: 1.15rem;
+}
+
+/* Navbar background */
+.navbar {
+  background: transparent !important; /* by default transparent */
+  transition: 0.5s ease-in-out;
+  padding: 15px 0;
+}
+
+.navbar.scrolled {
+  background: #000 !important; /* scroll hone ke baad black */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+/* Navbar Brand */
+.navbar-light .navbar-brand {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  transition: color 0.3s;
+}
+.navbar-light .navbar-brand:hover {
+  color: #ff9800;
+}
+
+/* Navbar Links */
+.navbar-light .navbar-nav .nav-link {
+  color: rgba(255,255,255,0.85);
+  font-weight: 500;
+  margin: 0 8px;
+  transition: 0.3s;
+  padding: 8px 14px;
+  border-radius: 4px;
+}
+
+/* Hover effect */
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #fff;
+  background: #ff9800;
+  font-weight: 600;
+}
+
+/* Active link */
+.navbar-light .navbar-nav .nav-link.active {
+  color: #000 !important;
+  background: #fff !important;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+.banner{
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: url(images/images\(2\).jpg);
+  background-repeat: no-repeat;  /* repeat band karega */
+  background-size: cover;        /* poora area cover karega */
+  background-position: center;  
+  margin-bottom: 0;
+}
+.banner:before,
+.sec2:before
+{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(#000, transparent);
+    pointer-events: none;
+}
+.banner:after,
+.sec2:after
+{
+    content:'';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(360gdeg, #000, transparent);
+    pointer-events: none;
+}
+.height100p{
+    height: 100vh;
+
+}
+.h100{
+    height: 100%;
+
+}
+.contentbox{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 10;
+}
+.contentbox h1{
+    font-weight: 800;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 4rem;
+}
+.contentbox p{
+    color: #fff;
+    font-size: 1.3rem;
+}
+.sec1{
+    padding: 100px 0;
+    background: #000;
+}
+.headerText{
+    color: #fff;
+}
+.headerText h2{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    
+}
+.sec1 {
+  padding: 100px 0;
+  background: #000;   /* black background */
+  color: #fff;        /* white text */
+}
+
+.sec1 .headerText {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.sec1 .headerText h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #fff;   /* heading white */
+}
+
+.sec1 .headerText p {
+  font-size: 1rem;
+  color: #ddd;  /* paragraph light gray for readability */
+  line-height: 1.8;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+/* ====== Placebox Cards ====== */
+.placebox {
+  background: #111;  /* dark gray card */
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.7);
+  transition: transform 0.3s ease-in-out;
+  color: #fff;
+}
+
+.placebox:hover {
+  transform: translateY(-10px);
+}
+
+.placebox .imgbx {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+}
+
+.placebox .imgbx img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.placebox .content {
+  padding: 20px;
+  text-align: center;
+}
+
+.placebox .content h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #fff;  /* white title */
+}
+
+.placebox .content span {
+  font-size: 16px;
+  font-weight: 500;
+  color: #bbb; /* softer gray for country name */
+}
+
+.sec2 {
+    position: relative;
+    background: url(images/images4.jpeg) no-repeat center center;
+    background-size: cover;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* overlay */
+.sec2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6); /* black transparent */
+    z-index: 1;
+}
+
+/* text and button overlay ke upar */
+.sec2 h1, 
+.sec2 p,
+.sec2 .btnD1 {
+    position: relative;
+    z-index: 2;
+}
+
+/* Heading */
+.sec2 h1 {
+    color: #fff;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 4.5rem;
+    margin-bottom: 20px;
+}
+
+/* Paragraph */
+.sec2 p {
+    color: #fff;
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+}
+
+/* Button Styling */
+.btnD1 {
+
+    border: 2px solid #0a0a0a;
+    color: #000;
+    background: #fff;
+    border-radius: 50px;
+    padding: 15px 50px;
+      font-size: 1.15rem;
+      outline: none;
+       font-weight: 600;
+       margin-top: 20px;
+    
+}
+
+.btnD1:hover {
+    background: #0a0a0a;   /* darker shade on hover */
+    transform: scale(1.05); /* thoda bada ho jaye */
+    color: #fff;
+    border: 2px solid #fff;
+}
+.blog {
+  position: relative;
+  padding: 100px 0;
+  background: #000;
+}
+
+.headerText {
+  text-align: center;  /* center align text */
+  color: #fff;         /* text white on black bg */
+}
+
+.headerText h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.headerText p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #ddd;  /* halka gray for readability */
+}
+
+
+.blog {
+  position: relative;
+  padding: 100px 0;
+  background: #000;
+  color: #fff;
+}
+
+.headerText {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.blogpost {
+  background: #f8f7f7;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease-in-out;
+  color: #000;
+ 
+}
+
+
+.blogpost .imgbx {
+  width: 100%;
+  height: 350px;   
+  overflow: hidden;
+  border-radius: 10px; 
+}
+
+.blogpost .imgbx img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  
+  display: block;
+}
+
+
+
+.blogpost:hover {
+  transform: translateY(-10px);
+}
+
+.blogpost .content {
+  padding: 20px;
+  text-align: center; 
+}
+
+.blogpost .content h1 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.blogpost .content p {
+  font-size: 15px;
+  color: #050505;
+  margin-bottom: 20px;
+}
+
+/* Button style */
+.btnD2 {
+  border: 2px solid #0a0a0a;
+  color: #000;
+  background: #fff;
+  border-radius: 50px;
+  padding: 12px 40px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: 0.3s ease;
+  display: inline-block;
+  margin: 0 auto; /* center button */
+}
+
+.btnD2:hover {
+  background: #0a0a0a;
+  color: #fff;
+  border: 2px solid #fff;
+  transform: scale(1.05);
+}
+/* Contact Section */
+.Contact {
+  position: relative;
+  padding: 100px 0;
+  background: url(images/img\ contact.jpg) no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+  color: #fff;
+}
+
+.Contact .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7); /* dark overlay for readability */
+  z-index: 1;
+}
+
+.contactBox {
+  position: relative;
+  z-index: 2;
+  background: rgba(255,255,255,0.08);
+  padding: 40px;
+  border-radius: 15px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0px 8px 25px rgba(0,0,0,0.4);
+}
+
+.contactBox h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.contactBox p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #ccc;
+}
+
+/* Form Controls */
+.contactBox .form-control {
+  width: 100%;
+  padding: 14px 18px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.9);
+  font-size: 1rem;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.contactBox .form-control:focus {
+  outline: none;
+  background: #fff;
+  box-shadow: 0px 0px 10px rgba(255,255,255,0.5);
+}
+
+/* Dropdowns style */
+.contactBox select.form-control {
+  cursor: pointer;
+}
+
+/* Textarea */
+.contactBox textarea.form-control {
+  resize: none;
+  min-height: 120px;
+}
+
+/* Button */
+.btnContact {
+  background: white;
+  color: #000;
+  padding: 14px 45px;
+  border-radius: 50px;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.btnContact:hover {
+  background: black;
+  border: 2px solid #fff;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contactBox {
+    padding: 25px;
+  }
+  .contactBox h2 {
+    font-size: 2rem;
+  }
+}
+/* Dropdown (Select) Styling */
+.contactBox select.form-control {
+  width: 100%;
+  height: 50px;           /* fixed height */
+  padding: 12px 15px;     /* inner spacing */
+  border-radius: 8px;
+  border: none;
+  background: rgba(255,255,255,0.9);
+  font-size: 1rem;
+  color: #333;
+  appearance: none;       /* default arrow hatane ke liye */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contactBox select.form-control:focus {
+  outline: none;
+  background: #fff;
+  box-shadow: 0px 0px 10px rgba(255,255,255,0.5);
+}
+
+footer {
+  background: #000;              /* black footer background */
+  color: #fff;
+  padding: 40px 0 20px 0;        /* upar zyada space, neeche kam */
+  text-align: center;            /* sab center */
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;            /* icons ke niche gap */
+}
+
+footer ul i {
+  font-size: 1.6rem;
+  margin: 0 15px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+footer ul i:hover {
+  color: #63bfd2;               /* hover pe orange highlight */
+  transform: scale(1.2);        /* thoda bada ho jaye */
+}
+
+footer .cpryt {
+  font-size: 0.95rem;
+  color: #f1eded;                  /* halka grey text */
+  margin-top: 10px;
+}
+@media (min-width: 992px){
+  .navbar-expand-lg .navbar-nav .navbar-link{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width: 992px){
+  .navbar-light .navbar-toggler {
+    background: #fff;
+    border-radius: 0%;
+  }
+.banner {
+  padding: 100vh 0;
+  min-height: 100vh;
+}
+
+.contentbox h1,
+.sec2 h1 {
+  font-size: 2rem;
+}
+  .navbar-expand-lg .navbar-nav .navbar-link{
+      padding-left: 1rem;
+    padding-right: 1rem; 
+}
+    .sec1{
+      padding: 20px 0;
+    }
+    .headerText h2{
+      font-size: 2rem;
+    }
+    .blog {
+    padding: 20px 0;
+    
+}
+.blogpost .imgbx img {
+    height: 100%;
+  }
+  .contact{
+    padding: 20px;
+  }
+   .contact .form-control{
+      height: 40px;
+      border: 1px solid #f5efef;
+  }
+  .btnD1,
+  .btnD2
+  {
+    padding: 10px 20px;
+    margin-top: 10px;
+  }
+  footer {
+    background: #000;
+    padding: 0px 0 20px 0;
+}
+footer ul {
+    list-style: none;
+    margin: 0 0 10px 0;
+}
+.sec2 {
+  
+    padding: 40px 0;
+    height: auto;
+}
+}
